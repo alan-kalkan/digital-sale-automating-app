@@ -1,0 +1,373 @@
+{
+  "version": "0",
+  "id": "bc0cc13d-8f6a-c2b3-1dc6-64e28440b521",
+  "detail-type": "shopifyWebhook",
+  "source": "aws.partner/shopify.com/99146694657/INT-OPS-OrdersDigitalProducts",
+  "account": "604013412815",
+  "time": "2024-04-22T14:23:42Z",
+  "region": "eu-west-3",
+  "resources": [],
+  "detail": {
+    "payload": {
+      "id": 5249679753312,
+      "admin_graphql_api_id": "gid://shopify/Order/5249679753312",
+      "app_id": 580111,
+      "browser_ip": "86.252.36.111",
+      "buyer_accepts_marketing": true,
+      "cancel_reason": null,
+      "cancelled_at": null,
+      "cart_token": "e238e237aacbd8c52da4224f76512ce5",
+      "checkout_id": 37536225099872,
+      "checkout_token": "aef6bcc1355ccd6ede1725f12fc7ebdb",
+      "client_details": {
+        "accept_language": "en-GB,en-US;q=0.9,en;q=0.8,fr;q=0.7",
+        "browser_height": 715,
+        "browser_ip": "86.252.36.111",
+        "browser_width": 1280,
+        "session_hash": null,
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+      },
+      "closed_at": null,
+      "company": null,
+      "confirmation_number": "2T8J48FKQ",
+      "confirmed": true,
+      "contact_email": "juliette.flament@thebradery.com",
+      "created_at": "2024-04-22T16:23:29+02:00",
+      "currency": "EUR",
+      "current_subtotal_price": "69.80",
+      "current_subtotal_price_set": {
+        "shop_money": { "amount": "69.80", "currency_code": "EUR" },
+        "presentment_money": { "amount": "69.80", "currency_code": "EUR" }
+      },
+      "current_total_additional_fees_set": null,
+      "current_total_discounts": "0.00",
+      "current_total_discounts_set": {
+        "shop_money": { "amount": "0.00", "currency_code": "EUR" },
+        "presentment_money": { "amount": "0.00", "currency_code": "EUR" }
+      },
+      "current_total_duties_set": null,
+      "current_total_price": "69.80",
+      "current_total_price_set": {
+        "shop_money": { "amount": "69.80", "currency_code": "EUR" },
+        "presentment_money": { "amount": "69.80", "currency_code": "EUR" }
+      },
+      "current_total_tax": "11.63",
+      "current_total_tax_set": {
+        "shop_money": { "amount": "11.63", "currency_code": "EUR" },
+        "presentment_money": { "amount": "11.63", "currency_code": "EUR" }
+      },
+      "customer_locale": "fr",
+      "device_id": null,
+      "discount_codes": [],
+      "email": "juliette.flament@thebradery.com",
+      "estimated_taxes": false,
+      "financial_status": "paid",
+      "fulfillment_status": null,
+      "landing_site": "/products/gelee-noire-nettoyante-aux-actifs-purifiants-2",
+      "landing_site_ref": null,
+      "location_id": null,
+      "merchant_of_record_app_id": null,
+      "name": "#1620472",
+      "note": null,
+      "note_attributes": [
+        { "name": "lang", "value": "fr" },
+        { "name": "Invoice Language", "value": "fr" },
+        { "name": "_elevar__fbp", "value": "fb.1.1705137662245.1971335398" },
+        { "name": "_elevar__ga", "value": "GA1.1.628229791.1705137659" },
+        { "name": "_elevar__ttp", "value": "FDf5V_77989h2GL9FHuOg2BxTiq" },
+        {
+          "name": "_elevar__scid",
+          "value": "f681a5f4-0cd4-4f6f-9c91-a20dbd35da77"
+        },
+        {
+          "name": "_elevar__ga_NY9LZ5DMS7",
+          "value": "GS1.1.1713794849.16.1.0.0.0.0"
+        },
+        {
+          "name": "_elevar__ga_52NNVEY758",
+          "value": "GS1.1.1713794850.18.1.0.53.0.0"
+        },
+        {
+          "name": "_elevar__ga_ED2H5PNCN1",
+          "value": "GS1.1.1713794849.16.1.0.40.0.0"
+        },
+        {
+          "name": "_elevar_visitor_info",
+          "value": "{&amp;amp;quot;referrer&amp;amp;quot;:&amp;amp;quot;https://www.google.com/&amp;amp;quot;,&amp;amp;quot;user_id&amp;amp;quot;:&amp;amp;quot;c0ddf1b1-0f4d-405c-bfb4-3846eeebc749&amp;amp;quot;,&amp;amp;quot;session_id&amp;amp;quot;:&amp;amp;quot;1713794850&amp;amp;quot;,&amp;amp;quot;session_count&amp;amp;quot;:&amp;amp;quot;40&amp;amp;quot;}"
+        },
+        { "name": "isApplePay", "value": "false" },
+        {
+          "name": "consentPrefs",
+          "value": "{&amp;amp;quot;marketing&amp;amp;quot;=&amp;amp;gt;&amp;amp;quot;&amp;amp;quot;, &amp;amp;quot;analytics&amp;amp;quot;=&amp;amp;gt;&amp;amp;quot;&amp;amp;quot;, &amp;amp;quot;preferences&amp;amp;quot;=&amp;amp;gt;&amp;amp;quot;&amp;amp;quot;, &amp;amp;quot;sale_of_data&amp;amp;quot;=&amp;amp;gt;&amp;amp;quot;&amp;amp;quot;}"
+        },
+        { "name": "cartToken", "value": "e238e237aacbd8c52da4224f76512ce5" },
+        {
+          "name": "frtToken",
+          "value": "d7167a824e554a40a38f080bcf8afc6d_1713795761486__UDF43_9ck__tt"
+        },
+        {
+          "name": "ftkn",
+          "value": "d7167a824e554a40a38f080bcf8afc6d_1713795761486__UDF43_9ck"
+        },
+        {
+          "name": "initial_shipping_delay",
+          "value": "[{\"id\":\"biolane\",\"deliveryDelay\":\"2024-04-23T14:23:16.198Z\"}]"
+        },
+        {
+          "name": "Shipping delay",
+          "value": "BIOLANE-ABO-COUCHES-1: 23/04/2024 16:23:16 | BIOLANE-CARTEKDO-40: 23/04/2024 16:23:16"
+        }
+      ],
+      "number": 1619472,
+      "order_number": 1620472,
+      "order_status_url": "https://thebradery.com/276004882/orders/939997dd77ce57a129ef40eec912f475/authenticate?key=b4babe111edc99e6ca4f943a7f1af3bf&none=XQ1UBlBEXVxVQlM",
+      "original_total_additional_fees_set": null,
+      "original_total_duties_set": null,
+      "payment_gateway_names": ["shopify_payments"],
+      "phone": null,
+      "po_number": null,
+      "presentment_currency": "EUR",
+      "processed_at": "2024-04-22T16:23:28+02:00",
+      "reference": null,
+      "referring_site": null,
+      "source_identifier": null,
+      "source_name": "web",
+      "source_url": null,
+      "subtotal_price": "69.80",
+      "subtotal_price_set": {
+        "shop_money": { "amount": "69.80", "currency_code": "EUR" },
+        "presentment_money": { "amount": "69.80", "currency_code": "EUR" }
+      },
+      "tags": "NotStockly, VENTECODE",
+      "tax_exempt": false,
+      "tax_lines": [
+        {
+          "price": "11.63",
+          "rate": 0.2,
+          "title": "FR TVA",
+          "price_set": {
+            "shop_money": { "amount": "11.63", "currency_code": "EUR" },
+            "presentment_money": { "amount": "11.63", "currency_code": "EUR" }
+          },
+          "channel_liable": false
+        }
+      ],
+      "taxes_included": true,
+      "test": false,
+      "token": "939997dd77ce57a129ef40eec912f475",
+      "total_discounts": "0.00",
+      "total_discounts_set": {
+        "shop_money": { "amount": "0.00", "currency_code": "EUR" },
+        "presentment_money": { "amount": "0.00", "currency_code": "EUR" }
+      },
+      "total_line_items_price": "69.80",
+      "total_line_items_price_set": {
+        "shop_money": { "amount": "69.80", "currency_code": "EUR" },
+        "presentment_money": { "amount": "69.80", "currency_code": "EUR" }
+      },
+      "total_outstanding": "0.00",
+      "total_price": "69.80",
+      "total_price_set": {
+        "shop_money": { "amount": "69.80", "currency_code": "EUR" },
+        "presentment_money": { "amount": "69.80", "currency_code": "EUR" }
+      },
+      "total_shipping_price_set": {
+        "shop_money": { "amount": "0.00", "currency_code": "EUR" },
+        "presentment_money": { "amount": "0.00", "currency_code": "EUR" }
+      },
+      "total_tax": "11.63",
+      "total_tax_set": {
+        "shop_money": { "amount": "11.63", "currency_code": "EUR" },
+        "presentment_money": { "amount": "11.63", "currency_code": "EUR" }
+      },
+      "total_tip_received": "0.00",
+      "total_weight": 200,
+      "updated_at": "2024-04-22T16:23:38+02:00",
+      "user_id": null,
+      "billing_address": {
+        "first_name": "juliette",
+        "address1": "23 Rue du Mail",
+        "phone": "06 44 79 12 88",
+        "city": "Paris",
+        "zip": "75002",
+        "province": null,
+        "country": "France",
+        "last_name": "Flament",
+        "address2": "The Bradery",
+        "company": null,
+        "latitude": 48.86707579999999,
+        "longitude": 2.3428516,
+        "name": "juliette Flament",
+        "country_code": "FR",
+        "province_code": null
+      },
+      "customer": {
+        "id": 6309706891360,
+        "email": "juliette.flament@thebradery.com",
+        "created_at": "2024-01-13T10:23:31+01:00",
+        "updated_at": "2024-04-22T16:23:38+02:00",
+        "first_name": "Juliette",
+        "last_name": "Flament",
+        "state": "enabled",
+        "note": "",
+        "verified_email": false,
+        "multipass_identifier": null,
+        "tax_exempt": false,
+        "phone": null,
+        "email_marketing_consent": {
+          "state": "subscribed",
+          "opt_in_level": "single_opt_in",
+          "consent_updated_at": "2024-01-13T10:23:31+01:00"
+        },
+        "sms_marketing_consent": null,
+        "tags": "civilite:undefined, Conjured Referrals - Advocate, Gold VIP, newsletter:false, Satisfied Express Delivery",
+        "currency": "EUR",
+        "tax_exemptions": [],
+        "admin_graphql_api_id": "gid://shopify/Customer/6309706891360",
+        "default_address": {
+          "id": 7767819321440,
+          "customer_id": 6309706891360,
+          "first_name": "juliette",
+          "last_name": "Flament",
+          "company": null,
+          "address1": "23 Rue du Mail",
+          "address2": "The Bradery",
+          "city": "Paris",
+          "province": null,
+          "country": "France",
+          "zip": "75002",
+          "phone": "06 44 79 12 88",
+          "name": "juliette Flament",
+          "province_code": null,
+          "country_code": "FR",
+          "country_name": "France",
+          "default": true
+        }
+      },
+      "discount_applications": [],
+      "fulfillments": [],
+      "line_items": [
+        {
+          "id": 12995356754016,
+          "admin_graphql_api_id": "gid://shopify/LineItem/12995356754016",
+          "attributed_staffs": [],
+          "current_quantity": 1,
+          "fulfillable_quantity": 1,
+          "fulfillment_service": "manual",
+          "fulfillment_status": null,
+          "gift_card": false,
+          "grams": 100,
+          "name": "Carte Cadeau - 100€",
+          "price": "39.90",
+          "price_set": {
+            "shop_money": { "amount": "39.90", "currency_code": "EUR" },
+            "presentment_money": { "amount": "39.90", "currency_code": "EUR" }
+          },
+          "product_exists": true,
+          "product_id": 6995313688672,
+          "properties": [
+            { "name": "Estimated delivery date", "value": "Biolane:23/04/2024" }
+          ],
+          "quantity": 1,
+          "requires_shipping": true,
+          "sku": "Carte Cadeau - 100€",
+          "taxable": true,
+          "title": "Carte Cadeau - 100€",
+          "total_discount": "0.00",
+          "total_discount_set": {
+            "shop_money": { "amount": "0.00", "currency_code": "EUR" },
+            "presentment_money": { "amount": "0.00", "currency_code": "EUR" }
+          },
+          "variant_id": 40680561541216,
+          "variant_inventory_management": "shopify",
+          "variant_title": "",
+          "vendor": "estheclinic",
+          "tax_lines": [
+            {
+              "channel_liable": false,
+              "price": "6.65",
+              "price_set": {
+                "shop_money": { "amount": "6.65", "currency_code": "EUR" },
+                "presentment_money": {
+                  "amount": "6.65",
+                  "currency_code": "EUR"
+                }
+              },
+              "rate": 0.2,
+              "title": "FR TVA"
+            }
+          ],
+          "duties": [],
+          "discount_allocations": []
+        }
+      ],
+      "payment_terms": null,
+      "refunds": [],
+      "shipping_address": {
+        "first_name": "juliette",
+        "address1": "23 Rue du Mail",
+        "phone": "06 44 79 12 88",
+        "city": "Paris",
+        "zip": "75002",
+        "province": null,
+        "country": "France",
+        "last_name": "Flament",
+        "address2": "The Bradery",
+        "company": null,
+        "latitude": 48.86707579999999,
+        "longitude": 2.3428516,
+        "name": "juliette Flament",
+        "country_code": "FR",
+        "province_code": null
+      },
+      "shipping_lines": [
+        {
+          "id": 4479528927328,
+          "carrier_identifier": null,
+          "code": "Aucun Frais de Livraison",
+          "discounted_price": "0.00",
+          "discounted_price_set": {
+            "shop_money": { "amount": "0.00", "currency_code": "EUR" },
+            "presentment_money": { "amount": "0.00", "currency_code": "EUR" }
+          },
+          "phone": null,
+          "price": "0.00",
+          "price_set": {
+            "shop_money": { "amount": "0.00", "currency_code": "EUR" },
+            "presentment_money": { "amount": "0.00", "currency_code": "EUR" }
+          },
+          "requested_fulfillment_service_id": null,
+          "source": "shopify",
+          "title": "Aucun Frais de Livraison",
+          "tax_lines": [
+            {
+              "channel_liable": false,
+              "price": "0.00",
+              "price_set": {
+                "shop_money": { "amount": "0.00", "currency_code": "EUR" },
+                "presentment_money": {
+                  "amount": "0.00",
+                  "currency_code": "EUR"
+                }
+              },
+              "rate": 0.2,
+              "title": "FR TVA"
+            }
+          ],
+          "discount_allocations": []
+        }
+      ]
+    },
+    "metadata": {
+      "Content-Type": "application/json",
+      "X-Shopify-Topic": "orders/create",
+      "X-Shopify-Shop-Domain": "my-moon-store.myshopify.com",
+      "X-Shopify-Order-Id": "5235658227808",
+      "X-Shopify-Test": "false",
+      "X-Shopify-Hmac-SHA256": "7/CY+EXwcrg85CGbwUlp/0kKaveuhBoDgDtgy119CAU=",
+      "X-Shopify-Webhook-Id": "3f8eb794-5953-45f4-98ba-2849a54977b1",
+      "X-Shopify-API-Version": "2024-01",
+      "X-Shopify-Triggered-At": "2024-04-22T14:23:33.576043981Z"
+    }
+  }
+}

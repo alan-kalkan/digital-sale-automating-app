@@ -1,0 +1,148 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  digital-code-automating
+
+  Sample SAM Template for digital-code-automating
+
+Globals:
+  Function:
+    Timeout: 600
+    MemorySize: 128
+
+Resources:
+  FilesS3Bucket:
+    Type: AWS::S3::Bucket
+    
+  DigitalCodeAutomatingFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: LambdaS3AccessPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:ListBucket
+                Resource: 
+                  - !GetAtt FilesS3Bucket.Arn
+                  - !Sub '${FilesS3Bucket.Arn}/*'
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: 'arn:aws:logs:*:*:*'
+        - PolicyName: SecretManagerAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                Resource:
+                  - 'arn:aws:secretsmanager:eu-west-3:604013412815:secret:tb-app/database/prod-DVVXrn'
+
+
+  DigitalCodeAutomatingFunctionIAM:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: LambdaS3AccessPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:ListBucket
+                Resource: 
+                  - !GetAtt FilesS3Bucket.Arn
+                  - !Sub '${FilesS3Bucket.Arn}/*'
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: 'arn:aws:logs:*:*:*'
+        - PolicyName: SecretManagerAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                Resource:
+                  - 'arn:aws:secretsmanager:eu-west-3:604013412815:secret:tb-app/database/prod-DVVXrn'
+                  
+  DigitalCodeAutomatingFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: digital_code_automating/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Role: !GetAtt DigitalCodeAutomatingFunctionRole.Arn
+
+  DigitalProductOrdersFunction:
+      Type: AWS::Serverless::Function 
+      Properties:
+        CodeUri: digital_products_orders/
+        Handler: app.lambda_handler
+        Runtime: python3.12
+        Architectures:
+          - x86_64
+        Timeout: 30
+        Policies:
+          - AWSLambdaExecute 
+          - Version: "2012-10-17" 
+            Statement:
+              - Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                Resource:
+                  - "arn:aws:secretsmanager:eu-west-3:604013412815:secret:tb-app/database/prod-DVVXrn"
+                  - "arn:aws:secretsmanager:eu-west-3:604013412815:secret:tb/prod/shopify-INT-OPS-credentials-sOebbP"
+        Events:
+          ShopifyEventTrigger:
+            Type: EventBridgeRule
+            Properties:
+              EventBusName: "aws.partner/shopify.com/99146694657/INT-OPS-OrdersDigitalProducts"
+              Pattern:
+                source:
+                  - "aws.partner/shopify.com/99146694657/INT-OPS-OrdersDigitalProducts"
+                  
+
+Outputs:
+  DigitalCodeAutomatingFunction:
+    Description: "Digital Code Automating Lambda Function ARN"
+    Value: !GetAtt DigitalCodeAutomatingFunction.Arn
+    
+  DigitalCodeAutomatingFunctionIAM:
+    Description: "IAM Role created for Digital Code Automating function"
+    Value: !GetAtt DigitalCodeAutomatingFunctionRole.Arn
+
+  DigitalProductOrdersFunction:
+    Description: "DigitalProductOrders Lambda Function ARN"
+    Value: !GetAtt DigitalProductOrdersFunction.Arn
+
+  DigitalProductOrdersFunctionIamRole:
+    Description: "Implicit IAM Role created for DigitalProductOrders function"
+    Value: !GetAtt DigitalProductOrdersFunctionRole.Arn
