@@ -1,0 +1,1 @@
+# digital-sale-automating-app
